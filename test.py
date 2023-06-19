@@ -9,3 +9,5 @@ for i in range(n):
 
     pa.write("anh yeu em", interval=0.1)
     pa.press("enter")
+
+    hh
