@@ -12,3 +12,6 @@ def maxlength_subArray(A):
             Maxlen = length
             iMax = i
     return iMax, Maxlen
+
+a = [1,2,3,4]
+print(maxlength_subArray(a))

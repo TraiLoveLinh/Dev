@@ -16,6 +16,41 @@ def binSearch(A, K):
                 right = mid - 1
     return -1
 
+def binSearch_r(A, K):
+    left = 0
+    right = len(A)-1
+    while left <= right:
+        mid = (left + right) // 2
+        if A[mid] == K:
+            return mid
+        elif A[mid] > K:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
 
+def binSearch_pr(A, K):
+    left = 0
+    right = len(A) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if A[mid] == K: return mid
+        elif A[mid] > K: right = mid - 1
+        else: left = mid + 1
+    return -1
 
+def binSearch_pr2(A, K):
+    left = 0
+    right = len(A) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if A[mid] == K: return mid
+        elif A[mid] > K: right = mid - 1
+        else: left = mid + 1
+    return -1
 
+a = [1,2,3,4,5,6,7,8,9,10]
+#a = list(reversed(a))
+print(a)
+#print(binSearch_r(a, 8))
+print(binSearch_pr2(a, 8))
